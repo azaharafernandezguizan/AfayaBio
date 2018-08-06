@@ -1,8 +1,19 @@
 <template>
+  <require from="./styles.css"></require>
+
+  <h1 class="title">Afaya Bio</h1>
+
+  <div class="menu">
+    <ul  repeat.for="nav of router.navigation">
+      <li class="${nav.isActive ? 'active menuButtons' : 'menuButtons'}"><a class="menuLink" href.bind="nav.href">${nav.title}</a></li>
+    </ul>  
+  </div>
+
+  <div class="mainContent">
+    <router-view></router-view> 
+  </div>
  
-  <h1>App visible</h1>
-   <ul repeat.for="nav of router.navigation">
-      <li class="${nav.isActive ? 'active' : ''}"><a href.bind="nav.href">${nav.title}</a></li>
-  </ul>
-  <router-view></router-view> 
+  <div class="AfayaCredits">
+    <a href='http://afaya.es/'>Afaya</a>
+  </div>
 </template>

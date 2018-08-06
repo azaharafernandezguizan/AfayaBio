@@ -1,3 +1,12 @@
 <template>
-    <h1>La ciencia es divertida</h1>
+
+    <div show.bind = "igNobelRandomList.length >0" class="IgNobelDiv">
+        <div repeat.for="igNobel of igNobelRandomList" class="igNobelList ${igNobel.categoria}">
+            <span>${igNobel.anio}</span><br/>
+            <span class="igNobelCategoria">${igNobel.categoria}</span><br/>
+            <span>${igNobel.descripcion}</span><br/>
+        </div>
+    </div>
+    <button click.delegate = "moreIgNobel()">Más IgNobels</button>
+
 </template>

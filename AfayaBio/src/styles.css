@@ -1,0 +1,91 @@
+/**General styles**/
+body{
+    background-image: url('../src/resources/images/shattered.png');
+}
+
+button{
+    background-color: black;
+    color: white;
+    margin-left: 40%;
+}
+
+.title{
+    color: #1f1f2e;
+    margin: auto;
+    text-align: center;
+    font-family:Book Antiqua;
+}
+
+li{
+    list-style:none;
+    width: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.menuButtons{
+    float:left;
+    width:15%;
+    border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px;
+    border: 0px solid #000000;
+    background-color: #231230;
+    font-weight: bold;
+}
+
+.menuLink{
+    color: #f4eff7;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.AfayaCredits{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.mainContent{
+    margin:5%;
+}
+
+/**Welcome content**/
+.welcomeMessage{
+    margin-top: 10%;
+    line-height: 2;
+    font-size: large;
+    width: 40%;
+    float: left;
+    margin-left: 10%;
+}
+
+.homeImage{
+    width:40%;
+    float:left;
+}
+
+/**Fun content**/
+.igNobelList{
+    margin: 1.5%;
+    padding:1%;
+    border-radius: 19px 19px 19px 19px;
+    -moz-border-radius: 19px 19px 19px 19px;
+    -webkit-border-radius: 19px 19px 19px 19px;
+    border: 0px solid #000000;
+}
+
+.Medicina{
+    background-color:#c7e9fc
+}
+
+.Biologia{
+    background-color: #edfcc7;
+}
+
+.igNobelCategoria{
+    font-weight: bold;
+}
