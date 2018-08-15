@@ -1,3 +1,34 @@
 <template>
-    <h1>Juega a Microbiología Test</h1>
+    <div show.bind="isWelcomeVisible" class="welcomeDiv">
+        <div class="halfScreen">
+            <img src="../src/resources/images/juego.png" alt="Drawing of different types of cells" class="gameStartImage" >
+        </div>
+        <div class="halfScreen">
+            <h1>${initialMessage}</h1>
+            <button click.delegate = "startGame(true)" class ="gameButton">Baja</button>
+            <button click.delegate = "startGame(false)" class ="gameButton secondButtonLow">Alta</button>
+        </div>
+        
+    </div>
+  
+    <div show.bind = "isGameVisible" class="gameDiv">
+        <h1 class="questionCategory">${currentQuestion.gruposMicros}</h1>
+        <span class="questionText">${currentQuestion.texto}</span>
+        </br>
+        <button click.delegate = "nextQuestion(true)" class ="gameButton answerButton">Verdadero</button>
+        <button click.delegate = "nextQuestion(false)" class ="gameButton answerButton">Falso</button>
+    </div>
+  
+    <div show.bind="isResultVisible" class="resultDiv">
+        <div class="halfScreen">
+            <img show.bind="result.category == 'Oro'" alt="imagen resultado oro" src="../src/resources/images/oro.jpg" class="medallas"/>
+            <img show.bind="result.category == 'Plata'" alt="imagen resultado plata" src="../src/resources/images/plata.jpg"  class="medallas"/>
+            <img show.bind="result.category == 'Bronce'" alt="imagen resultado bronce" src="../src/resources/images/bronce.jpg" class="medallas"/>
+        </div>
+        <div class="halfScreen">
+            <h1>${result.category}</h1>
+            <h3>${result.explanation}</h3>
+        </div>
+        <button click.delegate = "playAgain()" class = "gameButton">Volver a Jugar</button>
+    </div>
 </template>

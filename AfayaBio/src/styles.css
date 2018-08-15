@@ -7,6 +7,7 @@ button{
     background-color: black;
     color: white;
     margin-left: 40%;
+    min-height:30px;
 }
 
 .title{
@@ -88,4 +89,51 @@ a:link, a:visited, a:hover, a:active {
 
 .igNobelCategoria{
     font-weight: bold;
+}
+
+/**Game**/
+.halfScreen{
+    width:50%;
+    float:left;
+    margin-top:10%;
+}
+
+.gameStartImage, .gameButton{
+    width:50%;
+    margin-left:24%;
+}
+
+.gameButton{
+    border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px;
+    border: 0px solid #000000;
+    background-color: #231230;
+    font-weight: bold;
+}
+
+.secondButtonLow{
+    margin-top:5%;
+}
+
+.gameDiv{
+    margin-top:10%;
+}
+
+.questionCategory{
+    color:#551a8b;
+}
+
+.questionText{
+    font-size:1.2em;
+}
+
+.answerButton{
+    margin-top:2%;
+}
+
+.medallas{
+    width: 30%;
+    margin-left: 20%;
+    margin-top: -10%;
 }
