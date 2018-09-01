@@ -137,3 +137,51 @@ a:link, a:visited, a:hover, a:active {
     margin-left: 20%;
     margin-top: -10%;
 }
+
+/**entiende tu analisis**/
+.parameterData{
+    width:30%;
+    float:left;
+    color:#210247;
+    margin-bottom:0.5%;
+}
+
+.parameterLabel, .parameterInput{
+    display:inline-block;
+    width:40%;
+}
+
+.parameterInput{
+    margin-left: 2%;
+}
+
+.femaleCheck{
+    width:40%;
+    color:#210247;
+}
+
+.femaleCheckLabel{
+    width: 30%;
+    display: inline-block;
+}
+
+.formData{
+    margin-top:5%;
+    display:inline-block;
+}
+
+.resultsData{
+    border-color: rgb(71, 2, 71);
+    border-style: double;
+    color:#210247;
+    margin-bottom: 0.5%;
+}
+
+.sendButton{
+    margin-left:45%;
+}
+
+.errorMessage{
+    color:#a81103;
+    font-weight: bold;
+}

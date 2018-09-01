@@ -1,3 +1,41 @@
 <template>
-    <h1>Analisis</h1>
+    <div show.bind="isFormVisible">
+        <form role = "form" submit.delegate = "sendAnalisis()">
+            <div show.bind="isZeroValue">Para realizar el cálculo debe introducir un valor distinto a 0 en todos los campos.</div>
+            <div class="formData">
+                <div repeat.for="parameter of parameterList" class="parameterData">
+                    <label for = "parameter.Value" class="parameterLabel">${parameter.Name}</label>
+                    <input type = "number" value.bind = "parameter.Value" placeholder = "Enter value" class="parameterInput">
+                </div>
+                <br/>
+                <br/>
+                <div class="femaleCheck">
+                    <label for = "isFemaleCheckBox" class="femaleCheckLabel">Is Female</label>
+                    <input type = "checkbox" id = "isFemaleCheckBox" checked.bind = "isFemale"><br/>
+                </div>
+
+                <button type = "submit" class="sendButton">Enviar</button>
+            </div>
+            
+         </form>      
+    </div>
+    <div show.bind="isZeroValue" class="errorMessage">
+        <p>Por favor complete todos los datos antes de enviar el formulario</p>
+    </div>
+    <div show.bind = "isResultVisible">
+        <div show.bind = "results.length >0">
+            <div repeat.for="result of results" class="resultsData">
+                        <p><strong>${result.parametroName}</strong> muestra niveles anómalos</p>
+                        <p>Debido a esos niveles puede que usted padezca: </p>
+                        <p><strong>${result.patologiaName}.</strong> ${result.patologiaDescription}</p>
+                        <p><strong>Riesgos:</strong> ${result.riesgos}</p>
+                        <p><strong>Tratamiento:</strong> ${result.tratamiento}</p>
+                        <p><strong>Recomendaciones:</strong> ${result.recomendaciones}</p>
+            </div>
+        </div>
+        <div show.bind = "results.length ==0">
+            <p><strong>Enhorabuena! Está usted como una rosa.</strong></p>
+            <p>No obstante recuerde que es importante mantener una alimentación equilibrada y practicar deporte regularmente</p>
+        </div>
+    </div>
 </template>

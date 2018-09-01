@@ -21,12 +21,6 @@ export class Game {
       'Para comenzar selecciona tu nivel de dificultad';
     }
 
-    // getRecursos(){
-    //   this.recursosService.getRecursos(this, function (objectApp) {
-    //     objectApp.recursosTotalData = objectApp.dataList;
-    //   });
-    // }
-
   startGame(isLowLevel : boolean) {
     this.gameService.getPreguntas(this, function (objectApp) {
       objectApp.initGame(objectApp.dataList, isLowLevel);
@@ -100,5 +94,8 @@ export class Game {
 
   playAgain(){
     this.changeVisibility("Welcome");
+    this.currentQuestion = null;
+    this.indexCurrentQuestion = 0;
+    this.result = { category: "", explanation: "", points: 0};
     }
   }
